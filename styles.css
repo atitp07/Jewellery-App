@@ -18,28 +18,21 @@ body {
 
 table {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     border-collapse: collapse;
     margin: 0;
 }
 
 #banner{
-    height: 30%;
+    height: 200px;
+    /* background-color: aquamarine; */
 }
 
-#heading1{
+#heading1, #heading2 {
     height: 5%;
 }
 
-#heading2{
-    height: 5%;
-}
-
-#grid{
-    height: 30%;
-}
-
-#grid1{
+#grid, #grid1 {
     height: 30%;
 }
 
@@ -50,18 +43,77 @@ td {
 
 
 .banner {
+    position: relative;
     display: flex;
+    height: 200px;
     width: 100%;
     justify-self: center;
     overflow: hidden;
+    /* border: 1px solid #000; */
 }
 
 .banner img {
     width: 100%;
-    max-height: 200px;
+    height: 100%;
     object-fit: cover;
     border-radius: 10px;
 }
+
+/* slider */
+
+.slide {
+    display: none;
+    width: 100%;
+}
+
+.dots {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active{
+    background-color: #717171;
+}
+
+/* slider end */
+
+/* Navigation buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 10px;
+    margin-top: -22px;
+    color: black;
+    font-weight: bold;
+    font-size: 0.8rem;
+    transition: 0.6s ease;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.259); /*Slightly transparent background*/
+    border: none; /* Remove default button border */
+    border-radius: 5px; /* Make buttons round */
+}
+
+.next {
+    right: 10px;
+}
+
+.prev {
+    left: 10px;
+}
+
 
 #uptext {
     display: flex;
@@ -100,37 +152,108 @@ h4 {
 }
 
 .product img {
-    width: 5.55rem;
+    width: auto;
     height: 8.5rem;
-    object-fit: cover;
+    /* object-fit: contain; */
     border-radius: 5px;
 }
 
+@media (max-width: 768px){
 
-@media (max-width: 768px) {
+    h3{
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    h4{
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    .banner{
+        height: auto;
+    }
+
+    .banner img{
+        object-fit: fill;
+        width: 100%;
+    }
+
+    .product img {
+        width: auto;
+        height: 14rem;
+        border-radius: 5px;
+    }
+}
+
+@media (min-width: 768px) {
     body {
         height: 100vh;
     }
 
     table {
-        height: 100%;
+        height: 100vh;
     }
 
     #banner {
-        height: 30%;
+        height: 200px;
     }
 
-    #heading1, #heading2 {
-        height: 5%;
+    .banner{
+        height: auto;
     }
 
-    #grid, #grid1 {
-        height: 30%;
+    .banner img{
+        height: 100%;
+        /* object-fit: contain; */
     }
 
     .products-grid{
         gap: 17px;
     }
+}
+
+
+@media (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait),
+       (min-width: 1366px) and (max-width: 1024px) and (orientation: landscape){
+    
+    .banner{
+        height: auto;
+        margin: 0 0 10px 0;
+    }  
+    
+    .products-grid {
+        display: flex;
+        padding: 0 10px;
+        gap: 10px;
+        overflow-x: auto;
+    }
+    
+    .product {
+        text-align: center;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        background-color: #fff;
+    }
+    
+    .product img {
+        width: auto;
+        height: 16rem;
+        border-radius: 5px;
+    }
+
+    h3{
+        font-size: 2rem;
+        font-weight: 500;
+    }
+
+    h4{
+        font-size: 1.5rem;
+        font-weight: 400;
+        
+    }
+
 }
 
 
