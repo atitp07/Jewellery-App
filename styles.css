@@ -54,7 +54,7 @@ td {
 
 .banner img {
     width: 100%;
-    /* height: 100%;x */
+    /* height: 100%; */
     object-fit: cover;
     border-radius: 10px;
 }
@@ -68,7 +68,7 @@ td {
 
 .dots {
     text-align: center;
-    margin-top: 10px;
+    /* margin-top: 10px; */
 }
 
 .dot {
@@ -173,16 +173,15 @@ h4 {
     }
 
     .banner{
-        height: auto;
+        height: 200px;
     }
 
     .banner img{
-        object-fit: fill;
+        object-fit: contain;
         width: 100%;
     }
 
     .product img {
-        width: auto;
         height: 7rem;
         border-radius: 5px;
     }
@@ -202,7 +201,7 @@ h4 {
     }
 
     .banner{
-        height: auto;
+        height: 200px;
     }
 
     .banner img{
@@ -220,7 +219,7 @@ h4 {
        (min-width: 1366px) and (max-width: 1024px) and (orientation: landscape){
     
     .banner{
-        height: auto;
+        height: 400px;
         margin: 0 0 10px 0;
     }  
     
@@ -241,7 +240,7 @@ h4 {
     
     .product img {
         width: auto;
-        height: 16rem;
+        height: 15rem;
         border-radius: 5px;
     }
 
