@@ -31,3 +31,28 @@ dots.forEach((dot, index) => {
 setInterval(() => {
     changeSlide(1);
 }, 2000);
+
+//////////////////////// Swipe Function ////////////////////////
+
+let touchstartX = 0;
+let touchendX = 0;
+
+const banner = document.querySelector('.banner');
+
+banner.addEventListener('touchstart', e => {
+    touchstartX = e.changedTouches[0].screenX;
+});
+
+banner.addEventListener('touchend', e => {
+    touchendX = e.changedTouches[0].screenX;
+    handleGesture();
+});
+
+function handleGesture() {
+    if (touchendX < touchstartX) {
+        changeSlide(1);
+    }
+    if (touchendX > touchstartX) {
+        changeSlide(-1);
+    }
+}
