@@ -24,7 +24,7 @@ table {
 }
 
 #banner{
-    height: 200px;
+    height: 150px;
     /* background-color: aquamarine; */
 }
 
@@ -145,7 +145,7 @@ h4 {
 
     .banner{
         height: 180px;
-        /* background-color: aquamarine; */
+      
     }
 
     .banner img{
