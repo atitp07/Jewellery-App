@@ -1,4 +1,3 @@
-/* General styles */
 * {
     margin: 0;
     padding: 0;
@@ -25,7 +24,7 @@ body {
     align-items: center;
     gap: 20px;
     width: 100%;
-    max-width: 600px;
+    /* max-width: 600px; */
 }
 
 .gridL {
@@ -87,5 +86,12 @@ body {
         display: flex;
         width: 50%;
         gap: 20px;
+    }
+}
+
+
+@media (min-width: 1200px){
+    .container {
+        max-width: 2000px;
     }
 }
